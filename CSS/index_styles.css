@@ -212,3 +212,41 @@ header {
         transform:rotate(calc(2200deg / var(--num-colors)))
     }
 }
+@media screen and (max-width: 768px) {
+    .oval-button {
+        width: 80px;
+        height: 40px;
+        line-height: 2.5;
+        font-size: 14px;
+        transform: translate(-200%, -135%);
+    }
+
+    .oval-button2 {
+        width: 80px;
+        height: 40px;
+        line-height: 2.5;
+        font-size: 14px;
+        transform: translate(70%, 60%);
+    }
+
+    #round-button {
+        width: 90px;
+        height: 90px;
+        line-height: 5.5;
+    }
+
+    .center-circle {
+        width: 90px;
+        height: 90px;
+    }
+
+    #welcome-text {
+        font-size: 18px;
+        top: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    body {
+        background-size: contain; /* Change background size to contain on smaller devices */
+    }
+}
