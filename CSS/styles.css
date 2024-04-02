@@ -219,3 +219,7 @@ header {
         width: 90vw;
     }
 }
+
+@media(prefers-reduced-motion) {
+    .hidden {
+    transition: none;}}
