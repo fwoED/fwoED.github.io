@@ -169,7 +169,7 @@
         document.body.style.background = 'linear-gradient(170deg, rgba(255,255,255,1) 0%, rgba(126,191,246,1) 90%, rgba(255,218,0,1) 100%)';
         document.body.style.color = 'black';
         document.querySelector('footer').style.color = 'black';
-        navEL.classList.remoe('navbar-dark');
+        navEL.classList.remove('navbar-dark');
         
     }
     
@@ -242,6 +242,7 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
 const observer1 = new IntersectionObserver((entries) => {
     entries.forEach((entry) =>{
         console.log(entry)
@@ -264,7 +265,7 @@ window.addEventListener('scroll', () => {
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - sectionHeight / 3) { // Wenn der Benutzer sich innerhalb des Abschnitts befindet
+        if (pageYOffset >= sectionTop - sectionHeight / 4) { // Wenn der Benutzer sich innerhalb des Abschnitts befindet
             current = section.getAttribute('id'); // Die ID des aktuellen Abschnitts erhalten
         }
     });

@@ -79,17 +79,28 @@ header {
     padding: 1em;
 }
 
-.hidden, .uphid {
+.hidden {
     opacity: 0;
     transform: translateX(-100%);
     transition: 3s;
     filter: blur(5px);
     transition-property: transform, filter;
 }
-
-.show, .upsho {
+.uphid {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: 3s;
+    filter: blur(5px);
+    transition-property: transform, filter;
+}
+.show {
     opacity: 1;
     transform: translateX(0);
+    filter: blur(0px);
+}
+.upsho {
+    opacity: 1;
+    transform: translateY(0);
     filter: blur(0px);
 }
 
@@ -116,6 +127,7 @@ header {
     border-style: solid;
     border-radius: 10px;
     font-size: 18px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 #myBtn:hover {
@@ -220,6 +232,3 @@ header {
     }
 }
 
-@media(prefers-reduced-motion) {
-    .hidden {
-    transition: none;}}
