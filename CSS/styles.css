@@ -1,0 +1,244 @@
+
+:root {
+    --bg-primary: #fff;
+    --bs-body-color: white;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+
+html {
+    box-sizing: border-box;
+
+}
+
+
+
+body :not(.pink),
+body :not(.green) {
+
+}
+
+body {
+    background: var(--bg-primary) center no-repeat;
+    margin: 0;
+    min-height: 100vh; /* Ändere height auf min-height, damit der Footer am unteren Rand bleibt */
+    overflow-x: hidden;
+    height: 5000px;
+}
+
+body.light {
+    background: white;
+}
+
+
+.breaker{
+    margin-top: 60px;
+}
+
+
+
+#container {
+    position: relative;
+    color: white;
+}
+
+.container-view{
+    display:grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+.container.py-4 {
+    width: 50vw;
+}
+
+
+
+.dark {
+    --bg-primary: #000;
+    --bs-body-color: white;
+}
+
+footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Fülle die gesamte Breite des Viewports */
+    margin-bottom: 20px; /* Füge einen Abstand am unteren Rand hinzu */
+    color: white;
+}
+
+.glass {
+    margin-left:5%;
+    margin-right:5%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.2px);
+    -webkit-backdrop-filter: blur(4.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+.hidden{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: 3s;
+    filter:blur(5px);
+    transition-property: transform, filter;
+}
+
+.uphid{
+    opacity: 0;
+    transform: translatey(-100%);
+    transition: 2s;
+    filter:blur(15px);
+    transition-property: transform, filter;
+}
+
+
+
+.show{
+    opacity: 1;
+    transform: translateX(0);
+    filter:blur(0px);
+}
+
+.upsho{
+    opacity: 1;
+    transform: translatey(0);
+    filter:blur(0px);
+}
+
+.section {
+    display:grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 45%; /* Place the button 50% from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    outline: none; /* Remove outline */
+    background-color: transparent;
+    backdrop-filter: blur(200px);
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-color: #33333342;
+    border-style: solid;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+#myBtn:hover {
+    background-color: #55555550; /* Add a dark-grey background on hover */
+  }
+
+
+.navbar{
+    transition:all 0.6s;
+    margin-bottom: 56px;
+}
+
+.navbar-scrolled{
+    background-color: black;
+    box-shadow: 0 3px 10px rgb(0,0,0,0.20);
+}
+
+.navicon{
+    background-color: white;
+    border-radius: 12px;
+    margin-right: 5px;
+}
+
+.oval-button {
+    width: 90px;
+    height: 50px;
+    background-color: #3498db;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 0 20px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-230%,-135%);
+    text-align: center; /* Zentriere den Text horizontal */
+    line-height: 40px;
+    cursor: pointer;
+}
+.oval-button2 {
+    width: 90px;
+    height: 50px;
+    background-color: #db34db;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 0 20px;
+    position:absolute;
+    top: 60%;
+    left: 60%;
+    transform:translate(80%,60%);
+    text-align: center; /* Zentriere den Text horizontal */
+    line-height: 40px;
+    cursor: pointer;
+}
+
+#round-button {
+    width: 90px;
+    height: 90px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Zentriere den Text horizontal */
+    line-height: 6;
+    cursor: pointer;
+}
+
+
+.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.theme-selection {
+    margin: 20px;
+}
+
+.theme-selection h2 {
+    margin-bottom: 10px;
+}
+
+.theme-selection div {
+    margin-bottom: 10px;
+}
+
+
+

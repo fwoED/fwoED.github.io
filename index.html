@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/index_styles.css">
+    <title>INDEX</title> 
+</head>
+<script>
+    // Warte, bis das Dokument vollständig geladen ist
+    document.addEventListener("DOMContentLoaded", function () {
+        // Selektiere das Element mit der ID "welcome-text"
+        var welcomeText = document.getElementById("welcome-text");
+
+        // Funktion zum Ändern des Textes
+        function changeText() {
+            welcomeText.innerHTML = "    Choose your reading mode";
+            welcomeText.classList.add("new-text"); // Füge eine Klasse hinzu, um die Animation erneut zu starten, wenn gewünscht
+        }
+
+        // Füge einen Event Listener hinzu, um die Funktion nach Abschluss der Animation aufzurufen
+        welcomeText.addEventListener("animationend", changeText);
+    
+
+    // Selektiere alle Elemente mit der Klasse "oval-button" und dem "round-button"
+    var modeButtons = document.querySelectorAll('.oval-button, #round-button, .oval-button2');
+
+    // Füge einen Event Listener für jeden Button hinzu
+    modeButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            // Holen Sie sich den Modus aus dem data-mode-Attribut
+            var selectedMode = button.getAttribute('data-mode');
+
+            // Speichere den Modus im Local Storage
+            localStorage.setItem('selectedMode', selectedMode);
+
+            // Navigiere zur nächsten Seite
+            window.location.href = 'cv.html';
+        });
+    });
+});
+
+</script>
+
+<body>
+    <div id="welcome-text">Ready to code my way into your team <br> as the go-to IT intern</div>
+    <div id="container">
+        <div class="oval-button" data-mode="light">Light mode</div>
+        <div id="round-button" data-mode="color">Color mode</div>
+        <div class="oval-button2" data-mode='dark'>Dark mode</div>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
