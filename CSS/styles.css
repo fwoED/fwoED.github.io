@@ -86,6 +86,13 @@ header {
     filter: blur(5px);
     transition-property: transform, filter;
 }
+
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+
 .uphid {
     opacity: 0;
     transform: translateY(-100%);
